@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <h1>projeto</h1>
 
-      <Link href="/home">BUYtttt</Link>
+      <Link href="/home">BUtttt</Link>
     </div>
   );
 }
