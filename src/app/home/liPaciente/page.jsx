@@ -1,7 +1,7 @@
 export default function Home() {
     return(
       <div>
-        <h1>projeto</h1>
+        <h1>PACI</h1>
       </div>
     );
   }

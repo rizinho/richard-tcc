@@ -1,7 +1,7 @@
 export default function Home() {
     return(
       <div>
-        <h1>INICIO</h1>
+        <h1>TEL MED</h1>
       </div>
     );
   }
