@@ -1,0 +1,290 @@
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 100%; /* Reduz ou ajusta a largura para telas menores */
+        justify-content: center; /* Centraliza o logo se necessário */
+    }
+  
+    .navBar {
+        width: 100%; /* Ajusta a largura da barra de navegação */
+        flex-direction: column; /* Organiza os itens da barra de navegação verticalmente */
+    }
+  
+    .bLogin {
+        width: 100%; /* Ajusta a largura do botão para preencher o espaço disponível */
+    }
+  
+    .container, .backgroundContainer {
+        height: auto; /* Ajusta a altura dos containers para ser automática */
+        flex-direction: column; /* Organiza os elementos verticalmente */
+    }
+  
+    .caixa, .caixaTitulo {
+        width: 90%; /* Ajusta a largura para uma porcentagem da tela */
+        left: 5%; /* Centraliza a caixa */
+        top: 50%; /* Ajusta a posição vertical */
+    }
+  }
+  
+  
+  /*Header*/
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    min-height: 90px;
+    padding: 5px 29px 1px 20px;
+  }
+  
+  
+  /*Icon*/
+  .icon{
+   width: 65px; 
+   height: 50px;
+   margin-right: 20px;
+   margin-left: 10px;
+  }
+  /*fim Icon*/
+  
+  .logo{
+    width: 600px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /*txt*/
+  
+  .txtLog{
+    font-weight: 800;
+   font-size: 35px;
+  }
+  
+  /*fim txt*/
+  
+  /*botoes*/
+  
+  .navBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+  }
+  
+  .link{   
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0px 18px 0px 18px;;
+    font-weight: 600;
+  }
+  
+  
+  
+  .bLogin{
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    background-color: #6ba596;
+    cursor: pointer;
+    width: 700px;
+    height: 40px;
+    font-size: 18px;
+    margin-left: 25px;
+    padding: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .bLogin:visited{
+    color: inherit; /* ou outra cor de sua escolha */
+    text-decoration: none;
+  }
+  
+  .bLogin:hover{
+    background-color: #3b5d54;
+    color: white;
+  }
+  
+  .link:hover{
+    text-decoration: underline;
+  }
+  
+  .container{
+    display: flex;
+    height: 900px;
+    width: 100%;
+    background-color: black;
+    align-items: end;
+    justify-content: end;
+  }
+  
+  .backgroundContainer{
+    height: 900px;
+    width: 100%;
+    position: absolute;
+  
+  }
+  
+  .logoContainer{
+    position: relative;
+    width: 420px;
+    height: 170px;
+    margin-right: 50px;
+  }
+  
+  .main{
+    height: 800px;
+  }
+  
+  
+  
+  .caixa{
+    position: absolute; /* Posição absoluta em relação ao contêiner pai */
+    top: 56%; /* Ajusta a posição verticalmente */
+    left: 150px; /* Ajusta a posição horizontalmente */
+    transform: translateY(-50%); /* Centraliza a forma geométrica */
+    background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo da forma geométrica */
+    width: 500px; /* Largura da forma geométrica */
+    height: 600px; /* Altura da forma geométrica */
+    border-radius: 45px; /* Borda arredondada */
+    display: flex; /* Para centralizar o texto verticalmente */
+    justify-content: center; /* Para centralizar o texto horizontalmente */
+    align-items: center; /* Para centralizar o texto verticalmente */
+  }
+  
+  .caixaText {
+    color: black; /* Cor do texto */
+    font-size: 25px; /* Tamanho da fonte */
+    font-weight: 500;  /*Peso da fonte*/
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .caixaTitulo {
+    position: absolute;
+    top: 28%; /* Posicionamento da nova forma */
+    left: 150px; /* Posicionamento da nova forma */
+    transform: translateY(-50%);
+    background-color: #6ba596; /* Cor de fundo da nova forma */
+    width: 500px; /* Largura da nova forma */
+    height: 80px; /* Altura da nova forma */
+    border-radius: 60px; /* Borda arredondada */
+    display: flex; /* Para centralizar o texto verticalmente */
+    justify-content: center; /* Para centralizar o texto horizontalmente */
+    align-items: center; /* Para centralizar o texto verticalmente */
+  }  
+  
+  .titleText {
+    color: black;
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight:800;
+  }
+  
+  .ajuda{
+    background-color: #a8ddcf;
+    margin-top: 40px;
+    padding:50px ;
+    align-items: center;
+  }
+  
+  .textAjuda{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    text-decoration: underline;
+  }
+  
+  .caixaContainer{
+    display: flex;
+  }
+  
+  .caixa1{
+    background-color: white;
+    margin-top: 40px;
+    margin-left: 110px;
+    border-radius: 45px;
+    padding:30px ;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    flex: 1;
+    margin-right: 400px;
+  }
+  
+  .titleBox1 {
+    color: black; /* Cor do texto */
+    font-size: 33px; /* Tamanho da fonte */
+    font-weight: 500;  /*Peso da fonte*/
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .textBox1 {
+    color: black; /* Cor do texto */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 300;  /*Peso da fonte*/
+    margin-top: 26px;
+    text-align: left;
+    text-align: center;
+  }
+  
+  
+  .caixa2{
+    position: relative;
+    background-color: white;
+    margin-top: 40px;
+    margin-left: 110px;
+    border-radius: 45px;
+    padding:30px ;
+    align-items: center;
+    width: 500px;
+    height: 200px;
+    flex:1;
+    margin-right: 110px;
+  }
+  
+  .titleBox2 {
+    color: black; /* Cor do texto */
+    font-size: 33px; /* Tamanho da fonte */
+    font-weight: 500;  /*Peso da fonte*/
+  
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .textBox2 {
+    color: black; /* Cor do texto */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 300;  /*Peso da fonte*/
+    margin-top: 26px;
+    text-align: left;
+    text-align: center;
+  }
+  
+  .butDuvidas{
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    background-color: #6ba596;
+    cursor: pointer;
+    width: 500px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-left: 15px;
+    
+  }
+  
+  .butDuvidas:hover{
+    background-color: #3b5d54;
+    color: white;
+  }
+  
+  .roda {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+  }
