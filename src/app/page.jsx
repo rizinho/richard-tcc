@@ -32,7 +32,7 @@ export default function Home() {
         <div className={styles.navBar}>
           <button className={styles.link} onClick={handleScroll}>SAC</button>
           <button className={styles.link}>Configurações</button>
-          <Link href="/Login" className={styles.bLogin}>Login</Link>
+          <Link href="/usuarios/login" className={styles.bLogin}>Login</Link>
           <Link href="/usuarios/cadCliente" className={styles.bLogin}>Cadastro</Link>
         </div>
       </div>

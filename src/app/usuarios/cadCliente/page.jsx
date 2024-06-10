@@ -12,7 +12,7 @@ import Link from "next/link";
 
 
 
-export default function Cadastro() {
+export default function Home() {
 
   const [nomeCompleto, setNomeCompleto] = useState('');
   const [email, setEmail] = useState('');
