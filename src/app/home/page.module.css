@@ -1,0 +1,54 @@
+.main {
+    background-Color: #72b6a4;
+    min-Height: 100vh;
+    display: flex;
+    flex-Direction: column;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90px;
+    padding: 5px 29px 1px 20px;
+    background-color: white;
+  }
+  
+  
+  /*Icon*/
+  .icon {
+    width: 65px;
+    height: 50px;
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+  
+  /*fim Icon*/
+  
+  .logo {
+    width: 600px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /*txt*/
+  
+  .txtLog {
+    font-weight: 800;
+    font-size: 35px;
+  }
+  
+  
+  /* container */
+  
+  .container {
+    flex: 1;
+  }
+
+  /* footer */
+  
+  .roda {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+  }
