@@ -7,9 +7,6 @@ import Image from "next/image";
 
 export default function Home() {
 
-    const[email, setEmail] = useState('');
-    const[senha, setSenha] = useState('');
-
     return (
         <div className={styles.main}>
 
@@ -29,10 +26,8 @@ export default function Home() {
             </header>
 
             <div className={styles.container}>
-
+                  <p>Conteudo</p>
             </div>
-
-
 
             <footer className={styles.roda}>
                 &copy; 2024 ConsultDoctor.com - Todos os direitos reservados
