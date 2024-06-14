@@ -1,6 +1,12 @@
 'use client' 
+import React, {useRef,useState} from 'react';
 
-import {useState} from 'react'
+// carrosel
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+// carrosel
 
 import styles from "./page.module.css"
 import Image from "next/image";
@@ -26,7 +32,19 @@ export default function Home() {
             </header>
 
             <div className={styles.container}>
-                  <p>Conteudo</p>
+            <>
+      <Swiper navigation={true} modules={[Navigation]} className={styles.mySwiper}>
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
+    </>
             </div>
 
             <footer className={styles.roda}>

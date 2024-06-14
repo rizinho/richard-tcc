@@ -13,7 +13,9 @@
     "react": "^18",
     "react-dom": "^18",
     "react-imask": "^7.6.1",
-    "react-input-mask": "^2.0.4"
+    "react-input-mask": "^2.0.4",
+    "react-slick": "^0.30.2",
+    "swiper": "^11.1.4"
   },
   "devDependencies": {
     "@types/node": "20.14.2",
