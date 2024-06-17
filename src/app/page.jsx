@@ -41,8 +41,8 @@ export default function Home() {
         <Image
           className={styles.backgroundContainer}
           src="/imgContainer.png"
-          width={500}
-          height={500}
+          width={3000}
+          height={3000}
           alt="foto de uma médica"
         />
         <Image

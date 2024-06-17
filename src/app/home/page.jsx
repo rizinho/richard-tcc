@@ -32,19 +32,33 @@ export default function Home() {
             </header>
 
             <div className={styles.container}>
-            <>
-      <Swiper navigation={true} modules={[Navigation]} className={styles.mySwiper}>
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper>
-    </>
+
+                    <div className={styles.conCarousel}>
+                        <Swiper navigation={true} modules={[Navigation]} className={styles.swiper}>
+
+                            <SwiperSlide> <Image className={styles.imgCarosel} src="/carrosel1.jpg" width={3000} height={3000} alt="Imagem do logo"/> </SwiperSlide>
+                            <SwiperSlide> <Image className={styles.imgCarosel} src="/carrosel2.jpg" width={3000} height={3000} alt="Imagem do logo"/> </SwiperSlide>
+                            <SwiperSlide> <Image className={styles.imgCarosel} src="/carrosel3.jpg" width={3000} height={3000} alt="Imagem do logo"/> </SwiperSlide>
+
+                        </Swiper>
+                    </div>
+
+                    <div className={styles.boxMain}>
+
+                        <div className={styles.box}>
+                           
+                        </div>
+
+                        <div className={styles.box}>
+                            
+                        </div>
+
+                        <div className={styles.box}>
+                            
+                        </div>
+
+                    </div>
+
             </div>
 
             <footer className={styles.roda}>
