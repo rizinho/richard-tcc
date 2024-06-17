@@ -1,11 +1,15 @@
 'use client' 
+
 import React, {useRef,useState} from 'react';
 
 // carrosel
-import { Navigation } from 'swiper/modules';
+
+import { Navigation, Autoplay, Pagination, } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+
 // carrosel
 
 import styles from "./page.module.css"
@@ -34,11 +38,19 @@ export default function Home() {
             <div className={styles.container}>
 
                     <div className={styles.conCarousel}>
-                        <Swiper navigation={true} modules={[Navigation]} className={styles.swiper}>
 
-                            <SwiperSlide> <Image className={styles.imgCarosel} src="/carrosel1.jpg" width={3000} height={3000} alt="Imagem do logo"/> </SwiperSlide>
-                            <SwiperSlide> <Image className={styles.imgCarosel} src="/carrosel2.jpg" width={3000} height={3000} alt="Imagem do logo"/> </SwiperSlide>
-                            <SwiperSlide> <Image className={styles.imgCarosel} src="/carrosel3.jpg" width={3000} height={3000} alt="Imagem do logo"/> </SwiperSlide>
+                    <Swiper className={styles.swiper}
+                            centeredSlides={true}
+                            autoplay={{
+                            delay: 4000,
+                            disableOnInteraction: false,
+                            }}
+                            modules={[Autoplay, Pagination, Navigation]}
+                    >
+
+                            <SwiperSlide className={styles.swiperSlide}> <Image className={styles.imgCarosel} src="/carrosel1.jpg" width={3000} height={3000} alt="Imagem do logo"/> </SwiperSlide>
+                            <SwiperSlide className={styles.swiperSlide}> <Image className={styles.imgCarosel} src="/carrosel2.jpg" width={3000} height={3000} alt="Imagem do logo"/> </SwiperSlide>
+                            <SwiperSlide className={styles.swiperSlide}> <Image className={styles.imgCarosel} src="/carrosel3.jpg" width={3000} height={3000} alt="Imagem do logo"/> </SwiperSlide>
 
                         </Swiper>
                     </div>
@@ -46,15 +58,15 @@ export default function Home() {
                     <div className={styles.boxMain}>
 
                         <div className={styles.box}>
-                           
+                           <p className={styles.boxTxt}>Agendar Consulta</p>
                         </div>
 
                         <div className={styles.box}>
-                            
+                           <p className={styles.boxTxt}>Pedidos de Exames</p>
                         </div>
 
                         <div className={styles.box}>
-                            
+                           <p className={styles.boxTxt}>Minhas Consultas</p>
                         </div>
 
                     </div>
