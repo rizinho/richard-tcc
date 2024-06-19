@@ -70,7 +70,7 @@ export default function Home() {
         <div className={styles.caixaContainer}>
           <div className={styles.caixa1}>
             <p className={styles.titleBox1}>Fale conosco</p>
-            <p className={styles.textBox1}>Telefone: (14) 99887766<br /><br />Whatsapp: (14) 99887766<br /><br />E-mail: beta@gmail.com</p>
+            <p className={styles.textBox1}>Telefone: (14) 99887766<br/><br/>Whatsapp: (14) 99887766<br/><br/>E-mail: beta@gmail.com</p>
           </div>
 
           <div className={styles.caixa2}>
