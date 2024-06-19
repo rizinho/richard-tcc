@@ -14,6 +14,7 @@ import 'swiper/css/navigation';
 
 import styles from "./page.module.css"
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -52,22 +53,16 @@ export default function Home() {
                             <SwiperSlide className={styles.swiperSlide}> <Image className={styles.imgCarosel} src="/carrosel2.jpg" width={3000} height={3000} alt="Imagem do logo"/> </SwiperSlide>
                             <SwiperSlide className={styles.swiperSlide}> <Image className={styles.imgCarosel} src="/carrosel3.jpg" width={3000} height={3000} alt="Imagem do logo"/> </SwiperSlide>
 
-                        </Swiper>
+                    </Swiper>
                     </div>
 
-                    <div className={styles.boxMain}>
+                    <div className={styles.butMain}>
 
-                        <div className={styles.box}>
-                           <p className={styles.boxTxt}>Agendar Consulta</p>
-                        </div>
-
-                        <div className={styles.box}>
-                           <p className={styles.boxTxt}>Pedidos de Exames</p>
-                        </div>
-
-                        <div className={styles.box}>
-                           <p className={styles.boxTxt}>Minhas Consultas</p>
-                        </div>
+                        <button className={styles.butt}>
+                            <div className="bot"><Image className={styles.iconBut} src="/calendar.png" width={51} height={51} alt="Icone do botão"/></div>
+                            Agendar Consulta</button>
+                        <button className={styles.butt}> <Image className={styles.iconBut} src="/desktop.png"  width={100} height={100} alt="Icone do botão"/> Pedidos de Exames</button>
+                        <button className={styles.butt}> <Image className={styles.iconBut} src="/chat.png"     width={100} height={100} alt="Icone do botão"/> Minhas Consultas </button>
 
                     </div>
 
