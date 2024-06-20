@@ -57,12 +57,36 @@ export default function Home() {
                     </div>
 
                     <div className={styles.butMain}>
+                        
+                      <div className={styles.contBut}>
 
-                        <button className={styles.butt}>
-                            <div className="bot"><Image className={styles.iconBut} src="/calendar.png" width={51} height={51} alt="Icone do botão"/></div>
-                            Agendar Consulta</button>
-                        <button className={styles.butt}> <Image className={styles.iconBut} src="/desktop.png"  width={100} height={100} alt="Icone do botão"/> Pedidos de Exames</button>
-                        <button className={styles.butt}> <Image className={styles.iconBut} src="/chat.png"     width={100} height={100} alt="Icone do botão"/> Minhas Consultas </button>
+                            <button className={styles.butt}>
+                                <Image className={styles.iconBut} src="/calendar.png" width={100} height={100} alt="Icone do botão"/>
+                            </button>
+
+                           <p className={styles.txtBut}>Agendar Consulta</p>
+
+                      </div>
+
+                      <div className={styles.contBut}>
+
+                            <button className={styles.butt}> 
+                                <Image className={styles.iconBut} src="/desktop.png"  width={100} height={100} alt="Icone do botão"/>
+                            </button>
+
+                            <p className={styles.txtBut}>Pedidos de Exames</p>
+
+                      </div>  
+
+                      <div className={styles.contBut}>
+
+                            <button className={styles.butt}>
+                                <Image className={styles.iconBut} src="/chat.png"     width={100} height={100} alt="Icone do botão"/>
+                            </button>
+
+                            <p className={styles.txtBut}>Minhas Consultas</p>
+
+                      </div> 
 
                     </div>
 

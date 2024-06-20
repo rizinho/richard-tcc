@@ -1,5 +1,5 @@
 .main {
-    background-Color: #72b6a4;
+    background-Color: #dfdddd;
     min-Height: 100vh;
     display: flex;
     flex-Direction: column;
@@ -54,11 +54,9 @@
     height: 700px;
   }
 
-  .boxMain{
+  .butMain{
     margin-top: 100px;
-    margin-left:200px;
-    margin-right: 100px;
-    background-color: #527c71;
+    margin-left:20px;
     width: 1500px;
     height: 500px;
     border-radius: 10px;
@@ -66,27 +64,74 @@
     justify-content: space-between;
   }
   
-  .butt{
+  /* .butt{
     background-color: #f8f8f8;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50px;
     border: none;
     margin-top: 100px;
-    margin-left: 250px;
+    margin-left: 300px;
     text-align: left;
     font-size: 40px;
     font-weight: 600;
     cursor: pointer;
+  } */
+
+  .butt {
+    background-color: inherit;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    margin-top: 100px;
+    margin-left: 300px;
+    border-radius: 100%;
+    border: none;
+    
+    overflow: hidden;
+  }
+  .butt::before, .butt::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.25s ease;
+    border-radius: 30px;
+  }
+  .butt i {
+    position: relative;
+    color: #FFFFFF;
+    font-size: 30px;
+    margin-top: 15px;
+    transition: all 0.25s ease;
+  }
+  .butt::after {
+    box-shadow: inset 0 0 0 1px #6ba596;
+    border-radius: 100%;
+  }
+  .butt::before {
+    border-radius: 0;
+    margin-left: -100%;
+    box-shadow: inset 0 0 0 60px #6ba596;
+  }
+  .butt:hover::before {
+    margin-left: 0;
+  }
+
+  .iconBut{
+    margin: 70px;
+  }
+
+  .txtBut{
+    margin-left: 350px;
+    font-size: 30px;
+    font-weight: 700;
   }
   
-  .iconBut{
-    background-color: #72b6a4;
-    border-radius: 50px;
-    padding:10px;
-  }
-
-
 
   /* footer */
   
