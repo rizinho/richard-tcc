@@ -18,6 +18,13 @@ import Link from 'next/link';
 
 export default function Home() {
 
+
+        const [isOpen, setIsOpen] = useState(false);
+      
+        const toggleSidebar = () => {
+          setIsOpen(!isOpen);
+        }
+
     return (
         <div className={styles.main}>
 
@@ -33,6 +40,35 @@ export default function Home() {
                         />
                         <h1 className={styles.txtLog}>Consult Doctor</h1>
                     </div>
+
+                        <button className={styles.menuButton} onClick={toggleSidebar}>
+                            ☰
+                        </button>
+                        <div className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
+                            <h2>Administração</h2>
+                            <ul>
+                            <li>
+                                <Link href="/liMedico">
+                                Configurações
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/liMedico">
+                                Gerenciar Usuários
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/liMedico">
+                                Relatórios
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/liMedico">
+                                Suporte
+                                </Link>
+                            </li>
+                            </ul>
+                        </div>
                 </div>
             </header>
 
@@ -98,4 +134,4 @@ export default function Home() {
 
         </div>
     )
-}
+};
