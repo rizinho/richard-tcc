@@ -96,9 +96,9 @@ export default function Home() {
                         
                       <div className={styles.contBut}>
 
-                            <button className={styles.butt}>
+                            <Link className={styles.butt} href="/home/liMedico">
                                 <Image className={styles.iconBut} src="/calendar.png" width={100} height={100} alt="Icone do botão"/>
-                            </button>
+                            </Link>
 
                            <p className={styles.txtBut}>Agendar Consulta</p>
 
@@ -106,19 +106,19 @@ export default function Home() {
 
                       <div className={styles.contBut}>
 
-                            <button className={styles.butt}> 
+                            <Link className={styles.butt}  href="/home/telMensa"> 
                                 <Image className={styles.iconBut} src="/desktop.png"  width={100} height={100} alt="Icone do botão"/>
-                            </button>
+                            </Link>
 
-                            <p className={styles.txtBut}>Pedidos de Exames</p>
+                            <p className={styles.txtBut}>Conversar com o Medico</p>
 
                       </div>  
 
                       <div className={styles.contBut}>
 
-                            <button className={styles.butt}>
+                            <Link className={styles.butt}  href="/home/telConsulta">
                                 <Image className={styles.iconBut} src="/chat.png"     width={100} height={100} alt="Icone do botão"/>
-                            </button>
+                            </Link>
 
                             <p className={styles.txtBut}>Minhas Consultas</p>
 
