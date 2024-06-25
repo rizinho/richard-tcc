@@ -11,7 +11,7 @@ export default function Home() {
 
   const handleSend = () => {
     if (input.trim()) {
-      setMessages([...messages, { text: input, user: 'You' }]);
+      setMessages([...messages, { text: input, user: 'Você' }]);
       setInput('');
     }
   };
@@ -41,7 +41,7 @@ export default function Home() {
         {messages.map((message, index) => (
           <div
             key={index}
-            className={`${styles.message} ${message.user === 'You' ? styles.userMessage : styles.otherMessage}`}
+            className={`${styles.message} ${message.user === 'Você' ? styles.userMessage : styles.otherMessage}`}
           >
             <strong>{message.user}: </strong>{message.text}
           </div>
@@ -56,7 +56,7 @@ export default function Home() {
           className={styles.input}
           placeholder="Type a message..."
         />
-        <button onClick={handleSend} className={styles.sendButton}>Send</button>
+        <button onClick={handleSend} className={styles.sendButton}>Enviar</button>
       </div>
     </div>
 
