@@ -15,62 +15,15 @@ import 'swiper/css/navigation';
 import styles from "./page.module.css"
 import Image from "next/image";
 import Link from 'next/link';
+import Header from '../padrao/header/page';
+import Footer from '../padrao/footer/page';
 
 export default function Home() {
-
-
-        const [isOpen, setIsOpen] = useState(false);
-      
-        const toggleSidebar = () => {
-          setIsOpen(!isOpen);
-        }
 
     return (
         <div className={styles.main}>
 
-            <header>
-                <div className={styles.header}>
-                    <div className={styles.logo}>
-
-                        <Image className={styles.icon}
-                            src="/logotcc.png"
-                            width={500}
-                            height={500}
-                            alt="Imagem do logo"
-                        />
-                        <h1 className={styles.txtLog}>Consult Doctor</h1>
-                    </div>
-
-                        <button className={styles.menuButton} onClick={toggleSidebar}>
-                            ☰
-                        </button>
-                        <div className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
-                            <h2>Administração</h2>
-                            <ul>
-                            <li>
-                                <Link href="/liMedico">
-                                Configurações
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/liMedico">
-                                Gerenciar Usuários
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/liMedico">
-                                Relatórios
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/liMedico">
-                                Suporte
-                                </Link>
-                            </li>
-                            </ul>
-                        </div>
-                </div>
-            </header>
+           <Header/>
 
             <div className={styles.container}>
 
@@ -113,10 +66,7 @@ export default function Home() {
 
             </div>
 
-            <footer className={styles.roda}>
-                &copy; 2024 ConsultDoctor.com - Todos os direitos reservados
-            </footer>
-
+            <Footer/>
         </div>
     )
 };
