@@ -1,45 +1,43 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 90px;
-    padding: 5px 29px 1px 20px;
-    background-color: white;
-  }
-  
-  
-  /*Icon*/
-  .icon {
-    width: 65px;
-    height: 50px;
-    margin-right: 20px;
-    margin-left: 10px;
-  }
-  
-  /*fim Icon*/
-  
-  .logo {
-    width: 600px;
-    display: flex;
-    align-items: center;
-  }
-  
-  /*txt*/
-  
-  .txtLog {
-    font-weight: 800;
-    font-size: 35px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90px;
+  padding: 5px 29px 1px 20px;
+  background-color: white;
+  position: relative; /* Certifique-se de que o header tenha um contexto de posicionamento */
+}
 
-    /*barra slideBar*/
+/* Icon */
+.icon {
+  width: 65px;
+  height: 50px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+/* fim Icon */
+.logo {
+  width: 600px;
+  display: flex;
+  align-items: center;
+}
+
+/* txt */
+.txtLog {
+  font-weight: 800;
+  font-size: 35px;
+}
+
+/* barra slideBar */
 .menuButton {
   font-size: 30px;
-  background-color: inherit;
+  background-color: transparent;
   color: black;
   border: none;
-  position: fixed;
-  top: 10px;
-  right: 10px; /* Altere a posição para a direita */
+  position: relative;
+  top: -5px;
+  right: -5px;
   z-index: 1000;
   cursor: pointer;
   padding: 10px 15px;
@@ -47,10 +45,10 @@
 
 .sidebar {
   width: 0;
-  height: 500px;
-  position: fixed;
+  height: 100vh; /* Tornar a barra lateral da altura da tela */
+  position: fixed; /* Use fixed para que a barra lateral fique fixa na tela */
   top: 0;
-  right: 0; /* Altere a posição para a direita */
+  right: 0;
   background-color: #6ba596;
   overflow-x: hidden;
   transition: 0.5s;
@@ -60,7 +58,6 @@
 
 .sidebar.open {
   width: 250px;
-  padding-right: 20px;
 }
 
 .sidebar h2 {

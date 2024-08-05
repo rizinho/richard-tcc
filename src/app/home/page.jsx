@@ -54,7 +54,7 @@ export default function Home() {
 
                       <div className={styles.contBut}>
                             <Link className={styles.butt}  href="/home/telMensa"> <Image className={styles.iconBut} src="/desktop.png"  width={100} height={100} alt="Icone do botão"/> </Link>
-                            <p className={styles.txtBut}>Conversar com o Medico</p>
+                            <p className={styles.txtBut}>Bate Papo</p>
                       </div>  
 
                       <div className={styles.contBut}>
