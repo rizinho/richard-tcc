@@ -34,7 +34,7 @@ export default function Home () {
                     <div>
                         <div className={styles.sectionTitle}>Informações de Contato</div>
                         <div className={styles.sectionContent}>
-                            <p><strong>Email:</strong> joao.silva@clinicaexemplo.com</p>
+                            <p><strong>Email:</strong>teste@gmail.com</p>
                             <p><strong>Celular:</strong> +55 11 98765-4321</p>
                             <p><strong>Cidade:</strong> São Paulo</p>
                             <p><strong>Estado:</strong> SP</p>
@@ -44,7 +44,7 @@ export default function Home () {
                     <div>
                         <div className={styles.sectionTitle}>Local de Atendimento</div>
                         <div className={styles.sectionContent}>
-                            <p>Clínica Exemplo, Rua das Flores, 123, Jardim Primavera, São Paulo - SP</p>
+                            <p>Clinaica teste, São Paulo - SP</p>
                         </div>
                     </div>
                 </div>
