@@ -18,7 +18,7 @@ export default function Home() {
         <Link href="/home/telMensa"      > <p className={styles.linkTemp}>Tela de Mensagens</p>   </Link><br/>
         <Link href="/usuarios/cadCliente"> <p className={styles.linkTemp}>Cadastro do cliente</p> </Link><br/>
         <Link href="/usuarios/cadMedico" > <p className={styles.linkTemp}>Cadastro do medico</p>  </Link><br/>
-        <Link href="/perfil/medico" > <p className={styles.linkTemp}>Perfil medico</p>  </Link><br/>
+        <Link href="/perfil/medico"      > <p className={styles.linkTemp}>Perfil medico</p>       </Link><br/>
         <Link href="/usuarios/cadMedico" > <p className={styles.linkTemp}>Cadastro do medico</p>  </Link><br/>
         <Link href="/usuarios/login"     > <p className={styles.linkTemp}>Login</p>               </Link><br/>
         <Link href="/padrao/header"      > <p className={styles.linkTemp}>header</p>              </Link><br/>

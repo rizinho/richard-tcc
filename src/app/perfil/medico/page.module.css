@@ -9,15 +9,19 @@
     position: relative;
 }
 
-.header img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+.logotcc{
+    margin-left:760px;
+    margin-right:10px;
 }
 
 .header h1 {
     margin: 0;
     font-size: 24px;
+}
+
+
+.volt{
+margin-left: 500px;
 }
 
 .container {

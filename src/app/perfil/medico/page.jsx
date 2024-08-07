@@ -3,33 +3,36 @@
 import { useState } from 'react';
 import styles from './page.module.css';
 import Footer from '../../padrao/footer/page'
+import Image from 'next/image';
+import Link from 'next/link';
 
 
 export default function Home () {
 
-  const [isChatOpen, setChatOpen] = useState(false);
-
-    const toggleChatPopup = () => {
-        setChatOpen(!isChatOpen);
-    };
 
 
     return(
 
       <main>
             <header className={styles.header}>
-                <img src="https://via.placeholder.com/40?text=MD" alt="Logotipo Médico" />
-                <h1>Consult Doctor</h1>
+                <Image className={styles.logotcc} src="/logotcc.png" width={40} height={40} alt="Logotipo Médico" />
+                <h1 className={styles.logotcc} src="/logotcc.png">Consult Doctor</h1>
+
+                <Link href="/" className={styles.volt}> <Image src="/voltar.png" width={40} height={40} alt="Logotipo Médico"/></Link>
             </header>
+
             <div className={styles.container}>
                 <div className={styles.profileHeader}>
-                    <img src="https://via.placeholder.com/150" alt="Foto do Médico" />
+                    <Image src="/carrosel1.jpg" width={500} height={500}alt="Foto do Médico" />
+
                     <div>
                         <h1>Dr. João Silva</h1>
                         <p><strong>Especialidade:</strong> Cardiologia</p>
                         <p><strong>CRM:</strong> 12345-SP</p>
                     </div>
+
                 </div>
+
                 <div className={styles.infoSection}>
                     <div>
                         <div className={styles.sectionTitle}>Informações de Contato</div>
@@ -50,29 +53,14 @@ export default function Home () {
                 </div>
                 <div className={styles.profileInfo}>
                     <div className={styles.sectionTitle}>Sobre o Médico</div>
-                    <textarea className={styles.textarea} placeholder="Fale um pouco sobre você...">
+                    <p className={styles.textarea} placeholder="Fale um pouco sobre você...">
                         Sou um cardiologista com experiência em tratamento de doenças do coração. Meu objetivo é proporcionar um atendimento de qualidade e personalizado para cada paciente.
-                    </textarea>
+                    </p>
                 </div>
-                <div
-                    className={styles.chatButton}
-                    onClick={toggleChatPopup}
-                >
-                    💬
+                <div className={styles.chatButton}>
+                    <Link className={styles.chatButton} href="/home/telMensa" > 💬 </Link>
                 </div>
-                {isChatOpen && (
-                    <div className={styles.chatPopup}>
-                        <div className={styles.chatPopupHeader}>Chat com Suporte</div>
-                        <div className={styles.chatPopupBody}>
-                            <p><strong>Suporte:</strong> Olá! Como posso ajudar você?</p>
-                            {/* Mensagens de chat fictícias */}
-                        </div>
-                        <div className={styles.chatPopupFooter}>
-                            <input type="text" placeholder="Digite sua mensagem..." />
-                            <button>Enviar</button>
-                        </div>
-                    </div>
-                )}
+        
             </div>
             <Footer/>
       </main>      
