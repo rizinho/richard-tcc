@@ -1,0 +1,25 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+.searchContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Adicione margem conforme necessário */
+}
+
+.searchBar {
+    width: 20%; /* Ajuste o tamanho conforme necessário */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
