@@ -26,7 +26,7 @@ export default function Header () {
         <h1 className={styles.txtLog}>Consult Doctor</h1>
       </div>
       <button className={styles.menuButton} onClick={toggleSidebar}>
-        ☰
+        <Image src="/conf.png" width={65} height={50} alt="Imagem do logo"/>
       </button>
       <div className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
         <h2>Administração</h2>

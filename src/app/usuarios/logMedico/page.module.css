@@ -1,0 +1,105 @@
+.main {
+    background-Color: #72b6a4;
+    min-Height: 100vh;
+    display: flex;
+    flex-Direction: column;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90px;
+    padding: 5px 29px 1px 20px;
+    background-color: white;
+  }
+  
+  
+  /*Icon*/
+  .icon {
+    width: 65px;
+    height: 50px;
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+  
+  /*fim Icon*/
+  
+  .logo {
+    width: 600px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /*txt*/
+  
+  .txtLog {
+    font-weight: 800;
+    font-size: 35px;
+  }
+  
+  .tit{
+    margin-top: 200px;
+    font-weight: 800;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Gill Sans', sans-serif;
+    color: #d8e6e2;
+  }
+  
+  /* form */
+  
+  .form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+  }
+  
+  .form1 {
+    border-radius: 10px;
+    width: 600px;
+  }
+  
+  .inp {
+    margin: 10px;
+    text-align: left;
+    width: 572px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  /* footer */
+  
+  .roda {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .cad {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+    margin-left: 198px;
+    margin-top: 30px;
+    padding: 10px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .cad:visited {
+    text-decoration: none;
+  }
+  
+  .cad:hover {
+    background-color: #3b5d54;
+    color: white;
+  }

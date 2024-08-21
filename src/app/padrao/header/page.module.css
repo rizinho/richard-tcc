@@ -35,7 +35,7 @@
   background-color: transparent;
   color: black;
   border: none;
-  position: relative;
+  position: fixed;
   top: -5px;
   right: -5px;
   z-index: 1000;
@@ -50,6 +50,8 @@
   top: 0;
   right: 0;
   background-color: #6ba596;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px ;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
