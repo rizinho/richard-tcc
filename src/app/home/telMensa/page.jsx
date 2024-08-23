@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import styles from './page.module.css'
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -32,6 +33,10 @@ export default function Home() {
             />
             <h1 className={styles.txtLog}>Consult Doctor</h1>
           </div>
+
+          <Link href="/home" className={styles.volt}>
+              <Image src="/voltar.png" width={40} height={40} alt="Voltar"/>
+          </Link>
 
         </div>
       </header>

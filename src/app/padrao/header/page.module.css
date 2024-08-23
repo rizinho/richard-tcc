@@ -81,7 +81,7 @@
 }
 
 .sidebar ul li a {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 30px;
   font-weight: 400;
