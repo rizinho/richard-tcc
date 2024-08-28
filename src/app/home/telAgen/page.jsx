@@ -1,7 +1,5 @@
 'use client'
 
-
-
 import Header from '../../padrao/header/page'
 import Footer from '../../padrao/footer/page'
 import Image from 'next/image';
@@ -17,9 +15,9 @@ export default function Home() {
         <div className={styles.searchContainer}>
 
           <input
+            className={styles.searchBar}
             type="text"
             placeholder=" 🔍Search..."
-            className={styles.searchBar}
           />
         </div>
 
