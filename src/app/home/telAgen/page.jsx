@@ -18,7 +18,7 @@ export default function Home() {
 
           <input
             type="text"
-            placeholder="Search..."
+            placeholder=" 🔍Search..."
             className={styles.searchBar}
           />
         </div>
