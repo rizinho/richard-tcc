@@ -13,7 +13,7 @@ const Example = () => {
 
   return (
     <Center>
-      <Button onClick={onOpen}>Button</Button>
+      <Button className={styles.butModal} onClick={onOpen}>Pesquisar areas, ex: urologista, pediatra, etc...</Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -21,27 +21,26 @@ const Example = () => {
           maxW="40vw" // Define a largura máxima do modal como 80% da largura da viewport
           mx="auto"  // Centraliza horizontalmente
           my="auto"  // Centraliza verticalmente
+          // mt="100" // para espaçamento
         >
           <ModalCloseButton />
-          <ModalHeader>Contact Us</ModalHeader>
+          <ModalHeader>Busca</ModalHeader>
+
           <ModalBody>
             <FormControl>
-              <FormLabel>Name</FormLabel>
-              <Input />
-            </FormControl>
-            <FormControl mt="3">
-              <FormLabel>Email</FormLabel>
-              <Input />
+              <Input placeholder='Buscar por area'/>
             </FormControl>
           </ModalBody>
+
           <ModalFooter>
             <Button variant="ghost" colorScheme="blueGray" onClick={onClose}>
               Cancel
             </Button>
-            <Button colorScheme="blue" onClick={onClose}>
-              Save
+            <Button colorScheme="teal" onClick={onClose}>
+              Pesquisar
             </Button>
           </ModalFooter>
+          
         </ModalContent>
       </Modal>
 
@@ -54,6 +53,7 @@ export default function Home() {
     <div className={styles.pageContainer}>
       <Header />
       <div className={styles.container}>
+
         <div className={styles.searchContainer}>
           <ChakraProvider>
             <Center flex={1} px="3">
@@ -61,6 +61,7 @@ export default function Home() {
             </Center>
           </ChakraProvider>
         </div>
+        
       </div>
       <Footer />
     </div>
