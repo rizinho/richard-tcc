@@ -3,7 +3,8 @@
 import { useState } from 'react';
 // Chakra
 import { Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, FormControl, Input, Center, ChakraProvider } from "@chakra-ui/react";
-import { SearchIcon, LocationIcon } from "@chakra-ui/icons";
+import { SearchIcon } from "@chakra-ui/icons"; // Use o componente Icon para ícones personalizados
+import { MdLocationOn } from "react-icons/md"; // Importa o ícone de localização do react-icons
 // FIM Chakra
 
 import Header from '../../padrao/header/page';
@@ -31,12 +32,13 @@ const Example = () => {
       <Button
         onClick={onOpen}
         leftIcon={<SearchIcon />}
-        w='1000px' h='40px'
+        w='1000px' h='50px'
         backgroundColor='white'
         borderRadius='50px'
         justifyContent='flex-start'
         textAlign='left'
         fontSize='15px'
+        color='gray.600'
       >
         Pesquisar áreas, ex: urologista, pediatra, etc...
       </Button>
@@ -71,13 +73,14 @@ const Example = () => {
       {showNewButton && (
         <>
           <Button onClick={onNewModalOpen} mt='7'
-                  leftIcon={<LocationIcon />}
-                  w='1000px' h='40px'
+                  leftIcon={<MdLocationOn/>}
+                  w='1000px' h='50px'
                   backgroundColor='white'
                   borderRadius='50px'
                   justifyContent='flex-start'
                   textAlign='left'
                   fontSize='15px'
+                  color='gray.600'
           >
             Localização
           </Button>
