@@ -55,7 +55,8 @@ const Example = () => {
     // Exemplo de dados estáticos
     const exampleSpecialists = [
       { id: 1, name: 'Dr. João Silva', clinic: 'Clínica A', specialty: 'Urologista', state: 'SP', img: 'https://via.placeholder.com/50' },
-      { id: 2, name: 'Dra. Maria Oliveira', clinic: 'Clínica B', specialty: 'Urologista', state: 'SP', img: 'https://via.placeholder.com/50' }
+      { id: 2, name: 'Dra. Maria Oliveira', clinic: 'Clínica B', specialty: 'Urologista', state: 'SP', img: 'https://via.placeholder.com/50' },
+      { id: 1, name: 'Dra. Maria Oliveira', clinic: 'Clínica B', specialty: 'Urologista', state: 'SP', img: 'https://via.placeholder.com/50' }
     ];
 
     // Filtrar especialistas com base na especialidade e estado selecionado
@@ -214,20 +215,6 @@ export default function Home() {
         </div>
       </div>
       <Footer />
-      {/* Lista de especialistas a ser exibida fora do Chakra UI */}
-      {specialists.length > 0 && (
-        <div className={styles.specialistsList}>
-          {specialists.map(specialist => (
-            <div key={specialist.id} className={styles.specialistItem}>
-              <img src={specialist.img} alt={specialist.name} className={styles.specialistImg} />
-              <div className={styles.specialistDetails}>
-                <div className={styles.specialistName}>{specialist.name}</div>
-                <div className={styles.specialistClinic}>{specialist.clinic}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
     </div>
   );
 }
