@@ -132,7 +132,7 @@ const Example = () => {
             backgroundColor='white'
             borderRadius='50px'
             justifyContent='flex-start'
-            textAlign='left'+++++
+            textAlign='left'
             fontSize='15px'
           >
             {selectedState || 'Localização'}
