@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation'; 
 // Chakra
 import { Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, FormControl, Input, Center, List, ListItem, Image, Box, ChakraProvider } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
-import { MdLocationOn } from 'react-icons/md'; // Ícone de localização
+import { MdLocationOn } from 'react-icons/md';
 // FIM Chakra
 
 import Header from '../../padrao/header/page';
@@ -12,6 +13,7 @@ import Footer from '../../padrao/footer/page';
 import styles from './page.module.css';
 
 const Example = () => {
+  const router = useRouter(); // Hook do Next.js para roteamento
   const [isOpen, setIsOpen] = useState(false);
   const [isNewModalOpen, setIsNewModalOpen] = useState(false);
   const [showNewButton, setShowNewButton] = useState(false);
@@ -55,8 +57,7 @@ const Example = () => {
     // Exemplo de dados estáticos
     const exampleSpecialists = [
       { id: 1, name: 'Dr. João Silva', clinic: 'Clínica A', specialty: 'Urologista', state: 'SP', img: 'https://via.placeholder.com/50' },
-      { id: 2, name: 'Dra. Maria Oliveira', clinic: 'Clínica B', specialty: 'Urologista', state: 'SP', img: 'https://via.placeholder.com/50' },
-      { id: 1, name: 'Dra. Maria Oliveira', clinic: 'Clínica B', specialty: 'Urologista', state: 'SP', img: 'https://via.placeholder.com/50' }
+      { id: 2, name: 'Dra. Maria Oliveira', clinic: 'Clínica B', specialty: 'Urologista', state: 'SP', img: 'https://via.placeholder.com/50' }
     ];
 
     // Filtrar especialistas com base na especialidade e estado selecionado
@@ -65,6 +66,11 @@ const Example = () => {
     );
 
     setSpecialists(filteredSpecialists);
+  };
+
+  // Função que redireciona para a página de detalhes do médico
+  const handleSpecialistClick = (specialist) => {
+    router.push(`/telMedico/${specialist.id}`);  // Redireciona para a página de detalhes com o ID do médico
   };
 
   return (
@@ -187,7 +193,18 @@ const Example = () => {
       {specialists.length > 0 && (
         <Box mt={5} display="flex" flexWrap="wrap" gap="10px">
           {specialists.map(specialist => (
-            <Box key={specialist.id} display="flex" alignItems="center" bg="white" p={4} borderRadius="md" shadow="md" width="100%">
+            <Box 
+              key={specialist.id} 
+              display="flex" 
+              alignItems="center" 
+              bg="white" 
+              p={4} 
+              borderRadius="md" 
+              shadow="md" 
+              width="100%"
+              onClick={() => handleSpecialistClick(specialist)} // Redireciona ao clicar
+              cursor="pointer"
+            >
               <Image borderRadius="full" boxSize="50px" src={specialist.img} alt={specialist.name} mr={4} />
               <Box>
                 <Box fontWeight="bold">{specialist.name}</Box>

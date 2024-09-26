@@ -19,7 +19,6 @@ export default function Home() {
         <Link href="/usuarios/cadCliente"> <p className={styles.linkTemp}>Cadastro do cliente</p> </Link><br/>
         <Link href="/usuarios/cadMedico" > <p className={styles.linkTemp}>Cadastro do medico</p>  </Link><br/>
         <Link href="/perfil/medico"      > <p className={styles.linkTemp}>Perfil medico</p>       </Link><br/>
-        <Link href="/usuarios/logMedico" > <p className={styles.linkTemp}>login do medico</p>  </Link><br/>
         <Link href="/usuarios/login"     > <p className={styles.linkTemp}>Login</p>               </Link><br/>
         <Link href="/padrao/header"      > <p className={styles.linkTemp}>header</p>              </Link><br/>
         <Link href="/padrao/footer"      > <p className={styles.linkTemp}>footer</p>              </Link>
