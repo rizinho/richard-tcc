@@ -2,18 +2,15 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'; 
-// Chakra
 import { Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, FormControl, Input, Center, List, ListItem, Image, Box, ChakraProvider } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import { MdLocationOn } from 'react-icons/md';
-// FIM Chakra
-
 import Header from '../../padrao/header/page';
 import Footer from '../../padrao/footer/page';
 import styles from './page.module.css';
 
 const Example = () => {
-  const router = useRouter(); // Hook do Next.js para roteamento
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [isNewModalOpen, setIsNewModalOpen] = useState(false);
   const [showNewButton, setShowNewButton] = useState(false);
@@ -21,10 +18,10 @@ const Example = () => {
   const [selectedOption, setSelectedOption] = useState('');
   const [stateInput, setStateInput] = useState('');
   const [selectedState, setSelectedState] = useState('');
-  const [specialists, setSpecialists] = useState([]); // Lista de especialistas
+  const [specialists, setSpecialists] = useState([]);
 
   const suggestions = ['Urologista', 'Pediatra', 'Cardiologista'];
-  const stateSuggestions = ['São Paulo']; // Sugestões de estados
+  const stateSuggestions = ['SP', 'RJ', 'MG']; // Sugestões de estados
 
   const onOpen = () => setIsOpen(true);
   const onClose = () => setIsOpen(false);
@@ -35,8 +32,8 @@ const Example = () => {
 
   const handleSelectSuggestion = (suggestion) => {
     setSelectedOption(suggestion);
-    setShowNewButton(true); // Mostra o novo botão
-    setIsOpen(false); // Fecha o primeiro modal
+    setShowNewButton(true);
+    setIsOpen(false);
   };
 
   const onNewModalOpen = () => setIsNewModalOpen(true);
@@ -46,21 +43,18 @@ const Example = () => {
     setStateInput(e.target.value);
   };
 
-  const handleSelectState = () => {
-    setSelectedState('SP'); // Define a sigla "SP"
-    setIsNewModalOpen(false); // Fecha o segundo modal
-    fetchSpecialists(selectedOption, 'SP'); // Busca especialistas com base na seleção
+  const handleSelectState = (state) => {
+    setSelectedState(state); // Define a sigla do estado selecionado
+    setIsNewModalOpen(false);
+    fetchSpecialists(selectedOption, state); // Busca especialistas com base na seleção
   };
 
   const fetchSpecialists = (option, state) => {
-    // Aqui você pode substituir com uma chamada real para uma API
-    // Exemplo de dados estáticos
     const exampleSpecialists = [
       { id: 1, name: 'Dr. João Silva', clinic: 'Clínica A', specialty: 'Urologista', state: 'SP', img: 'https://via.placeholder.com/50' },
       { id: 2, name: 'Dra. Maria Oliveira', clinic: 'Clínica B', specialty: 'Urologista', state: 'SP', img: 'https://via.placeholder.com/50' }
     ];
 
-    // Filtrar especialistas com base na especialidade e estado selecionado
     const filteredSpecialists = exampleSpecialists.filter(specialist => 
       specialist.specialty === option && specialist.state === state
     );
@@ -68,14 +62,13 @@ const Example = () => {
     setSpecialists(filteredSpecialists);
   };
 
-  // Função que redireciona para a página de detalhes do médico
+  // Redireciona para a página de detalhes do médico
   const handleSpecialistClick = (specialist) => {
-    router.push(`/telMedico/${specialist.id}`);  // Redireciona para a página de detalhes com o ID do médico
+    router.push(`/home/telMedico/[id]/${specialist.id}`); // Ajuste a rota se necessário
   };
 
   return (
     <Center flexDirection="column">
-      {/* Primeiro botão que abre o primeiro modal */}
       <Button
         onClick={onOpen}
         leftIcon={<SearchIcon />}
@@ -89,14 +82,9 @@ const Example = () => {
         {selectedOption || 'Pesquisar áreas, ex: urologista, pediatra, etc...'}
       </Button>
 
-      {/* Primeiro Modal */}
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent
-          maxW="40vw"
-          mx="auto"
-          my="auto"
-        >
+        <ModalContent maxW="40vw" mx="auto" my="auto">
           <ModalCloseButton />
           <ModalHeader>Busca</ModalHeader>
           <ModalBody>
@@ -127,13 +115,12 @@ const Example = () => {
         </ModalContent>
       </Modal>
 
-      {/* Segundo botão que abre o segundo modal */}
       {showNewButton && (
         <>
           <Button 
             onClick={onNewModalOpen} 
             mt='7'
-            leftIcon={<MdLocationOn />} // Ícone de localização
+            leftIcon={<MdLocationOn />}
             w='1000px' h='40px'
             backgroundColor='white'
             borderRadius='50px'
@@ -144,14 +131,9 @@ const Example = () => {
             {selectedState || 'Localização'}
           </Button>
 
-          {/* Segundo Modal */}
           <Modal isOpen={isNewModalOpen} onClose={onNewModalClose}>
             <ModalOverlay />
-            <ModalContent
-              maxW="40vw"
-              mx="auto"
-              my="auto"
-            >
+            <ModalContent maxW="40vw" mx="auto" my="auto">
               <ModalCloseButton />
               <ModalHeader>Selecione o estado</ModalHeader>
               <ModalBody>
@@ -167,7 +149,7 @@ const Example = () => {
                       .map(state => (
                         <ListItem 
                           key={state} 
-                          onClick={handleSelectState} 
+                          onClick={() => handleSelectState(state)} // Passa o estado selecionado
                           cursor="pointer"
                           _hover={{ backgroundColor: "gray.100" }}
                           padding="5px"
@@ -189,7 +171,6 @@ const Example = () => {
         </>
       )}
 
-      {/* Lista de especialistas */}
       {specialists.length > 0 && (
         <Box mt={5} display="flex" flexWrap="wrap" gap="10px">
           {specialists.map(specialist => (
@@ -202,7 +183,7 @@ const Example = () => {
               borderRadius="md" 
               shadow="md" 
               width="100%"
-              onClick={() => handleSpecialistClick(specialist)} // Redireciona ao clicar
+              onClick={() => handleSpecialistClick(specialist)} 
               cursor="pointer"
             >
               <Image borderRadius="full" boxSize="50px" src={specialist.img} alt={specialist.name} mr={4} />

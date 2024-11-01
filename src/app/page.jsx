@@ -1,18 +1,16 @@
-'use client'
+'use client';
 
 import { useRef } from "react";
-
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from 'next/link';
 
 export default function Home() {
-
   const targetRef = useRef(null);
 
   const handleScroll = () => {
     if (targetRef.current) {
-      targetRef.current.scrollIntoView ({ behavior: 'smooth'});
+      targetRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -34,6 +32,8 @@ export default function Home() {
           <button className={styles.link}>Configurações</button>
           <Link href="/usuarios/login" className={styles.bLogin}>Login</Link>
           <Link href="/usuarios/cadCliente" className={styles.bLogin}>Cadastro</Link>
+          {/* Botão para redirecionar para o médico com ID 1 */}
+          <Link href="/home/telMedico/1" className={styles.bLogin}>Ver Médico 1</Link>
         </div>
       </div>
 
@@ -74,17 +74,15 @@ export default function Home() {
           </div>
 
           <div className={styles.caixa2}>
-            <p className={styles.titleBox2}>Duvidas frequentes</p>
-            <button className={styles.butDuvidas}>Duvidas sobre cadastro</button>
-            <button className={styles.butDuvidas}>Duvidas sobre pagamentos</button>
-
-            
+            <p className={styles.titleBox2}>Dúvidas</p>
+            <button className={styles.butDuvidas}>Dúvidas sobre cadastro</button>
+            <button className={styles.butDuvidas}>Dúvidas sobre pagamentos</button>
           </div>
         </div>
       </div>
       <footer className={styles.roda}>
-                &copy; 2024 ConsultDoctor.com - Todos os direitos reservados
-          </footer>
+        &copy; 2024 ConsultDoctor.com - Todos os direitos reservados
+      </footer>
     </main>
   );
 }
