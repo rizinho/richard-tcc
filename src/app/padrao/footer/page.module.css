@@ -1,7 +1,14 @@
   /* footer */
   
+
   .roda {
-    background-color: white;
-    padding: 20px;
-    text-align: center;
+    position: fixed;   /* Fixa o footer na parte inferior */
+    bottom: 0;         /* Na parte inferior da tela */
+    left: 0;           /* Alinhado à esquerda */
+    width: 100%;       /* Toda a largura */
+    background-color: #fff; /* Cor de fundo */
+    text-align: center;     /* Alinha o texto ao centro */
+    padding: 20px 0;        /* Espaçamento vertical */
+    z-index: 1000;          /* Para manter o footer acima de outros elementos */
   }
+  

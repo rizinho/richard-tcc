@@ -32,8 +32,6 @@ export default function Home() {
           <button className={styles.link}>Configurações</button>
           <Link href="/usuarios/login" className={styles.bLogin}>Login</Link>
           <Link href="/usuarios/cadCliente" className={styles.bLogin}>Cadastro</Link>
-          {/* Botão para redirecionar para o médico com ID 1 */}
-          <Link href="/home/telMedico/1" className={styles.bLogin}>Ver Médico 1</Link>
         </div>
       </div>
 

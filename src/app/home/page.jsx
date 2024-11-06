@@ -52,16 +52,6 @@ export default function Home() {
                             <p className={styles.txtBut}>Agendar Consulta</p>
                       </div>
 
-                      <div className={styles.contBut}>
-                            <Link className={styles.butt}  href="/home/telMensa"> <Image className={styles.iconBut} src="/desktop.png"  width={100} height={100} alt="Icone do botão"/> </Link>
-                            <p className={styles.txtBut}>Bate Papo</p>
-                      </div>  
-
-                      <div className={styles.contBut}>
-                            <Link className={styles.butt}  href="/home/telConsulta"> <Image className={styles.iconBut} src="/chat.png"   width={100} height={100} alt="Icone do botão"/> </Link>
-                            <p className={styles.txtBut}>Minhas Consultas</p>
-                      </div> 
-
                     </div>
 
             </div>

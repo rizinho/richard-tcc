@@ -1,3 +1,8 @@
+.pageContainer{
+    height: 900px;
+    width: 100%;
+}
+
 .modalOverlay {
     position: fixed;
     top: 0;
