@@ -1,26 +1,22 @@
-.pageContainer {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #dfdddd;
-}
-
-.container{
-    flex: 1;
-}
-
-.searchContainer {
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
-    margin-top: 30px; /* Adicione margem conforme necessário */
+    align-items: center;
 }
 
-.searchBar {
-    width: 20%; /* Ajuste o tamanho conforme necessário */
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+.modalContent {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
 }
+
