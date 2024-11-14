@@ -1,13 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { Modal, Box, Button } from '@mui/material';
+
 import Header from '../../padrao/header/page';
 import Footer from '../../padrao/footer/page';
 import styles from './page.module.css';
 
-import { Modal, Box, Button } from '@mui/material';
 
-export default function ModalExample() {
+export default function Home() {
 
   const [open, setOpen] = useState(false);
 
@@ -24,7 +25,17 @@ export default function ModalExample() {
             >
                 <Box className={styles.modalOverlay}>
                     <div className={styles.modalContent}>
-                        <h2>Meu Modal com Material-UI</h2>
+                        <h3>Meu Modal com Material-UI</h3>
+
+                        <div className={styles.modalChose}>
+                          <h3>Especialista</h3>
+                         <select> 
+                           <option selected value='urologista'>Urologista</option>
+                           <option value='pediatra'>Pediatra</option>
+                           <option value='cardiologista'>Cardiologista</option>
+                         </select>
+                        </div>
+
                         <Button onClick={handleClose}>Fechar</Button>
                     </div>
                 </Box>
