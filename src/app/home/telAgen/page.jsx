@@ -11,6 +11,7 @@ export default function Home() {
   const [open, setOpen] = useState(false); // Controle do primeiro modal
   const [openSecondModal, setOpenSecondModal] = useState(false); // Controle do segundo modal
   const [showSecondButton, setShowSecondButton] = useState(false); // Exibe o botão para o segundo modal
+  const [showThirdButton, setShowThirdButton] = useState(false); // Exibe o botão para iniciar a busca
   const [selectedSpecialty, setSelectedSpecialty] = useState(''); // Estado para armazenar a especialidade selecionada
 
   const handleOpen = () => setOpen(true);
@@ -20,6 +21,14 @@ export default function Home() {
   const handleOptionSelect = (event) => {
     const selectedValue = event.target.value; // Obtém o valor da opção selecionada
     setSelectedSpecialty(selectedValue); // Atualiza o estado com a especialidade selecionada
+    setOpen(false); // Fecha o primeiro modal
+    setShowSecondButton(true); // Exibe o botão para o segundo modal
+  };
+
+  // Função que fecha o primeiro modal e exibe o botão para abrir o segundo modal
+  const handleOptionSelect2 = (event) => {
+    const selectedValue = event.target.value; // Obtém o valor da opção selecionada
+    setSelectedLocation(selectedValue); // Atualiza o estado com a especialidade selecionada
     setOpen(false); // Fecha o primeiro modal
     setShowSecondButton(true); // Exibe o botão para o segundo modal
   };
@@ -71,12 +80,22 @@ export default function Home() {
           <Box className={styles.modalOverlay}>
             <div className={styles.modalContent}>
               <h3>Segundo Modal</h3>
-              <p>Conteúdo do segundo modal.</p>
-              <Button onClick={handleCloseSecondModal}>Fechar Segundo Modal</Button>
+              <select onChange={handleOptionSelect2} value={selectedLocation}>
+                  <option value="" disabled>
+                    Selecione um estado
+                  </option>
+                  <option value="sp">SP</option>
+
+                </select>
             </div>
           </Box>
         </Modal>
 
+        {showThirdButton && (
+          <Button className={styles.modalBut}>
+            Localizão
+          </Button>
+        )}
       </div>
 
       <Footer />
