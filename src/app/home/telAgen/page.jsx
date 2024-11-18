@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Modal, Box, Button } from '@mui/material';
 
 import Header from '../../padrao/header/page';
@@ -8,14 +8,15 @@ import Footer from '../../padrao/footer/page';
 import styles from './page.module.css';
 
 export default function Home() {
+
   const [open, setOpen] = useState(false); // Controle do primeiro modal
   const [openSecondModal, setOpenSecondModal] = useState(false); // Controle do segundo modal
   const [showSecondButton, setShowSecondButton] = useState(false); // Exibe o botão para o segundo modal
   const [showThirdButton, setShowThirdButton] = useState(false); // Exibe o botão para iniciar a busca
   const [selectedSpecialty, setSelectedSpecialty] = useState(''); // Estado para armazenar a especialidade selecionada
+  const [selectedLocation, setSelectedLocation] = useState(''); // Estado para armazenar a Localidade selecionada
 
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  
 
   // Função que fecha o primeiro modal e exibe o botão para abrir o segundo modal
   const handleOptionSelect = (event) => {
@@ -29,11 +30,14 @@ export default function Home() {
   const handleOptionSelect2 = (event) => {
     const selectedValue = event.target.value; // Obtém o valor da opção selecionada
     setSelectedLocation(selectedValue); // Atualiza o estado com a especialidade selecionada
-    setOpen(false); // Fecha o primeiro modal
-    setShowSecondButton(true); // Exibe o botão para o segundo modal
+    setOpenSecondModal(false); // Fecha o primeiro modal
+    setShowThirdButton(true); // Exibe o botão para o segundo modal
   };
 
-  // Funções para abrir e fechar o segundo modal
+  // Funções para abrir e fechar primeiro e segundo modal
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   const handleOpenSecondModal = () => setOpenSecondModal(true);
   const handleCloseSecondModal = () => setOpenSecondModal(false);
 
@@ -57,6 +61,7 @@ export default function Home() {
 
               <div className={styles.modalChose}>
                 <h3>Especialista</h3>
+
                 <select onChange={handleOptionSelect} value={selectedSpecialty}>
                   <option value="" disabled>
                     Selecione uma especialidade
@@ -65,6 +70,7 @@ export default function Home() {
                   <option value="pediatra">Pediatra</option>
                   <option value="cardiologista">Cardiologista</option>
                 </select>
+                
               </div>
             </div>
           </Box>
@@ -80,6 +86,7 @@ export default function Home() {
           <Box className={styles.modalOverlay}>
             <div className={styles.modalContent}>
               <h3>Segundo Modal</h3>
+
               <select onChange={handleOptionSelect2} value={selectedLocation}>
                   <option value="" disabled>
                     Selecione um estado
@@ -87,16 +94,19 @@ export default function Home() {
                   <option value="sp">SP</option>
 
                 </select>
+
             </div>
           </Box>
         </Modal>
 
         {showThirdButton && (
-          <Button className={styles.modalBut}>
-            Localizão
+          <Button className={styles.modalButEnd}>
+            Buscar
           </Button>
         )}
       </div>
+
+
 
       <Footer />
     </div>
