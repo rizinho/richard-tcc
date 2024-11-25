@@ -18,20 +18,25 @@
 
 .modalBut{
    font-size: 15px;
-   height: 50px;
-   width: 700px;
-
+   height: 40px;
+   width: 1000px;
    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+   background-color: #ffffff;
    color: black;
 }
 
 .modalButEnd{
     font-size: 15px;
-    height: 50px;
-    width: 700px;
-    background-color: aquamarine;
+    height: 40px;
+    width: 1000px;
+    background-color: #6ba596;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     color: black;
+ }
+
+ .modalButEnd:hover{
+    background-color: #3b5d54;
+    color: white;
  }
 
 .modalOverlay {
