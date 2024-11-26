@@ -7,8 +7,6 @@ import Header from '../../padrao/header/page';
 import Footer from '../../padrao/footer/page';
 import styles from './page.module.css';
 
-import { Link } from 'next/link';
-
 export default function Home() {
   const [open, setOpen] = useState(false); // Controle do primeiro modal
   const [openSecondModal, setOpenSecondModal] = useState(false); // Controle do segundo modal
@@ -108,15 +106,15 @@ export default function Home() {
         {/* Lista de especialistas filtrados */}
         <div className={styles.resultsContainer}>
           {filteredDoctors.map((doctor) => (
-            <Link
+            <Button
               key={doctor.id}
               className={styles.resultButton}
               onClick={() => {
-                window.location.href = `/perfil/${doctor.id}`;
+              window.location.href = `/home/telMedico/${doctor.id}`;
               }}
             >
               {doctor.name}
-            </Link>
+            </Button>
           ))}
         </div>
       </div>
