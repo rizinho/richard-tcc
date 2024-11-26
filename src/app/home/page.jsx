@@ -48,8 +48,10 @@ export default function Home() {
                     <div className={styles.butMain}>
                         
                       <div className={styles.contBut}>
-                            <Link className={styles.butt} href="/home/telAgen"> <Image className={styles.iconBut} src="/calendar.png" width={100} height={100} alt="Icone do botão"/> </Link>
-                            <p className={styles.txtBut}>Agendar Consulta</p>
+                      <Link className={styles.butt} href="/home/telAgen">
+                        <Image className={styles.iconBut} src="/calendar.png" width={80} height={80} alt="Ícone do botão" />
+                        <p className={styles.txtBut}>Agendar Consulta</p>
+                      </Link>
                       </div>
 
                     </div>

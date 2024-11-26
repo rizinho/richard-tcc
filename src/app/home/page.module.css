@@ -26,37 +26,43 @@
   }
 
   .butt {
-    background-color: inherit;
+    background-color: #6ba596;
     cursor: pointer;
     position: relative;
-    display: inline-block;
-    width: 250px;
-    height: 250px;
+    display: flex; /* Flexbox para alinhar o conteúdo */
+    align-items: center; /* Alinhar verticalmente */
+    justify-content: center; /* Centralizar horizontalmente o grupo (ícone e texto) */
+    gap: 20px; /* Espaço entre o ícone e o texto */
+    width: 1450px;
+    height: 100px;
+    padding: 20px;
     margin-top: -50px;
     margin-left: 230px;
-    border-radius: 100%;
+    border-radius: 50px;
     transition: 0.3s ease;
     border: 1px solid #6ba596;
     box-shadow: 8px 7px 9px rgba(0, 0, 0, 0.2);
-  }
+    text-decoration: none;
+}
 
-  .butt:hover {
-    background-color: #6ba596;
-    box-shadow: inset #6ba596;
-  }
+.butt:hover {
+    background-color: #3b5d54;
+    color: white;
+}
 
-
-  .iconBut{
-    margin: 70px;
-    
-  }
-
-
-  .txtBut{
-    text-align: center;
-    margin-top: 10px;
-    margin-left: 240px;
-    font-size: 30px;
+.txtBut {
+    font-size: 40px;
     font-weight: 700;
     text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.1);
-  }
+    color: black;
+    margin: 0; /* Remove margens indesejadas */
+    text-align: center; /* Apenas por segurança */
+}
+
+.txtBut:hover {
+   color: white;
+}
+
+.iconBut {
+    margin: 0; /* Remove margens adicionais */
+}
