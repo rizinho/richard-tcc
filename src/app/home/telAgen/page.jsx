@@ -23,6 +23,7 @@ export default function Home() {
     { id: 3, name: 'Dr. Carlos Sousa', specialty: 'cardiologista', location: 'sp' },
     { id: 4, name: 'Dra. Ana Oliveira', specialty: 'urologista', location: 'rj' },
     { id: 5, name: 'Dr. Pedro Lima', specialty: 'pediatra', location: 'rj' },
+    { id: 6, name: 'Dr. Alexandre Morais', specialty: 'cardiologista', location: 'rj' },
   ];
 
   const handleOptionSelect = (event) => {
