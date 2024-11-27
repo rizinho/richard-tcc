@@ -4,6 +4,7 @@ import doctors from '../../../listMed/medicos';
 import Header from '../../../padrao/header/page';
 import Footer from '../../../padrao/footer/page';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './page.module.css';
 
 export default function DoctorProfile({ params: { id } }) {
@@ -28,8 +29,8 @@ export default function DoctorProfile({ params: { id } }) {
         <div className={styles.profile}>
           {/* Informações do Médico */}
           <div className={styles.profileCard}>
-            <img
-              src="/path/to/doctor-image.jpg"
+            <Image
+              src="/fotoPerf.jpg" width={250} height={250}
               alt={`Foto de ${name}`}
               className={styles.doctorImage}
             />
@@ -50,7 +51,7 @@ export default function DoctorProfile({ params: { id } }) {
               rel="noopener noreferrer"
               className={styles.whatsappButton}
             >
-              Fale com o médico no WhatsApp
+              Fale com o médico via WhatsApp
             </a>
           </div>
         </div>
