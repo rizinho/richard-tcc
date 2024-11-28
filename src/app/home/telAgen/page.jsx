@@ -106,18 +106,41 @@ export default function Home() {
 
         {/* Lista de especialistas filtrados */}
         <div className={styles.resultsContainer}>
-          {filteredDoctors.map((doctor) => (
-            <Button
-              key={doctor.id}
-              className={styles.resultButton}
-              onClick={() => {
-              window.location.href = `/home/telMedico/${doctor.id}`;
-              }}
-            >
-              {doctor.name}
-            </Button>
-          ))}
+  {filteredDoctors.map((doctor) => (
+    <div key={doctor.id} className={styles.doctorCard}>
+      <div className={styles.doctorContent}>
+        {/* Imagem do médico */}
+        <div className={styles.doctorImage}>
+          <img 
+            src='/fotoPerf.jpg' // Exemplo de imagem
+            alt={doctor.name} 
+            className={styles.image}
+          />
         </div>
+
+        {/* Informações do médico */}
+        <div className={styles.doctorInfo}>
+          <h3>{doctor.name}</h3>
+          <p>{doctor.specialty}</p>
+          <p>{doctor.location === 'sp' ? 'São Paulo' : 'Rio de Janeiro'}</p>
+        </div>
+      </div>
+
+      {/* Botão de agendamento */}
+      <div className={styles.schedule}>
+        <Button
+          className={styles.timeButton}
+          onClick={() => {
+            window.location.href = `/home/telMedico/${doctor.id}`;
+          }}
+        >
+          Detalhes
+        </Button>
+      </div>
+    </div>
+  ))}
+</div>
+
       </div>
 
       <Footer />

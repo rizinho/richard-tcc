@@ -38,19 +38,23 @@ export default function Home() {
                             modules={[Autoplay, Pagination, Navigation]}
                     >
 
-                            <SwiperSlide className={styles.swiperSlide}> <Image className={styles.imgCarosel} src="/carrosel1.jpg" width={3000} height={3000} alt="Imagem do logo"/> </SwiperSlide>
-                            <SwiperSlide className={styles.swiperSlide}> <Image className={styles.imgCarosel} src="/carrosel2.jpg" width={3000} height={3000} alt="Imagem do logo"/> </SwiperSlide>
-                            <SwiperSlide className={styles.swiperSlide}> <Image className={styles.imgCarosel} src="/carrosel3.jpg" width={3000} height={3000} alt="Imagem do logo"/> </SwiperSlide>
+                            <SwiperSlide className={styles.swiperSlide}> <Image className={styles.imgCarosel} src="/carroTest3.png" width={2000} height={600} alt="Imagem do logo"/> </SwiperSlide>
+                            <SwiperSlide className={styles.swiperSlide}> <Image className={styles.imgCarosel} src="/carrosel2.jpg" width={2000} height={600} alt="Imagem do logo"/> </SwiperSlide>
+                            <SwiperSlide className={styles.swiperSlide}> <Image className={styles.imgCarosel} src="/carrosel3.jpg" width={2000} height={600} alt="Imagem do logo"/> </SwiperSlide>
 
                     </Swiper>
                     </div>
+
+                    <h1 className={styles.titleTxt}>Guia Médico</h1>
+                    <p className={styles.txt}>Sua busca ainda mais facil.</p>
+                    <p className={styles.txt}>Encontre Médicos perto de você.</p>
 
                     <div className={styles.butMain}>
                         
                       <div className={styles.contBut}>
                       <Link className={styles.butt} href="/home/telAgen">
                         <Image className={styles.iconBut} src="/calendar.png" width={80} height={80} alt="Ícone do botão" />
-                        <p className={styles.txtBut}>Agendar Consulta</p>
+                        <p className={styles.txtBut}>Consulte Agora</p>
                       </Link>
                       </div>
 

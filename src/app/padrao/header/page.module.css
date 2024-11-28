@@ -29,64 +29,24 @@
   font-size: 35px;
 }
 
-/* barra slideBar */
-.menuButton {
-  font-size: 30px;
-  background-color: transparent;
-  color: black;
+.navBar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+
+.link{ 
+  color: black;  
   border: none;
-  position: fixed;
-  top: -5px;
-  right: -5px;
-  z-index: 1000;
+  background-color: transparent;
   cursor: pointer;
-  padding: 10px 15px;
-}
-
-.sidebar {
-  width: 0;
-  height: 100vh; /* Tornar a barra lateral da altura da tela */
-  position: fixed; /* Use fixed para que a barra lateral fique fixa na tela */
-  top: 0;
-  right: 0;
-  background-color: #6ba596;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px ;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  z-index: 999; /* Certifique-se de que a barra lateral fique acima do conteúdo */
-}
-
-.sidebar.open {
-  width: 250px;
-}
-
-.sidebar h2 {
-  color: black;
-  margin-top: 20px;
-  margin-left: 27px;
-  font-size: 30px;
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin: 20px 0;
-}
-
-.sidebar ul li a {
-  color: rgb(255, 255, 255);
   text-decoration: none;
-  font-size: 30px;
-  font-weight: 400;
+  font-size: 18px;
+  margin: 0px 18px 0px 18px;;
+  font-weight: 600;
 }
 
-.sidebar ul li a:hover {
+.link:hover{
   text-decoration: underline;
 }
