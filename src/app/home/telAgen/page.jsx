@@ -18,15 +18,15 @@ export default function Home() {
 
   // Simulação de dados de especialistas
   const doctors = [
-    { id: 1, name: 'Dr. João Silva', specialty: 'urologista', location: 'sp' },
-    { id: 2, name: 'Dra. Maria Costa', specialty: 'pediatra', location: 'sp' },
-    { id: 3, name: 'Dr. Carlos Sousa', specialty: 'cardiologista', location: 'sp' },
-    { id: 4, name: 'Dra. Ana Oliveira', specialty: 'urologista', location: 'rj' },
-    { id: 5, name: 'Dr. Pedro Lima', specialty: 'pediatra', location: 'rj' },
-    { id: 6, name: 'Dr. Alexandre Morais', specialty: 'cardiologista', location: 'rj'},
-    { id: 6, name: 'Dr. Felipe Lima', specialty: 'cardiologista', location: 'rj'},
-    { id: 7, name: 'Dr. Mariani Grassi', specialty: 'cardiologista', location: 'rj'},
-    { id: 8, name: 'Dr. Ricardão Dedo Grosso', specialty: 'cardiologista', location: 'rj'},
+    { id: 1, name: 'Dr. João Silva', specialty: 'Urologista', location: 'sp' },
+    { id: 2, name: 'Dra. Maria Costa', specialty: 'Pediatra', location: 'sp' },
+    { id: 3, name: 'Dr. Carlos Sousa', specialty: 'Cardiologista', location: 'sp' },
+    { id: 4, name: 'Dra. Ana Oliveira', specialty: 'Urologista', location: 'rj' },
+    { id: 5, name: 'Dr. Pedro Lima', specialty: 'Pediatra', location: 'rj' },
+    { id: 6, name: 'Dr. Alexandre Morais', specialty: 'Cardiologista', location: 'rj'},
+    { id: 6, name: 'Dr. Felipe Lima', specialty: 'Cardiologista', location: 'rj'},
+    { id: 7, name: 'Dr. Mariani Grassi', specialty: 'Cardiologista', location: 'rj'},
+    { id: 8, name: 'Dr. Ricardão Dedo Grosso', specialty: 'Cardiologista', location: 'rj'},
   ];
 
   const handleOptionSelect = (event) => {
@@ -72,9 +72,9 @@ export default function Home() {
                 <option value="" disabled>
                   Selecione uma especialidade
                 </option>
-                <option value="urologista">Urologista</option>
-                <option value="pediatra">Pediatra</option>
-                <option value="cardiologista">Cardiologista</option>
+                <option value="Urologista">Urologista</option>
+                <option value="Pediatra">Pediatra</option>
+                <option value="Cardiologista">Cardiologista</option>
               </select>
             </div>
           </Box>
@@ -107,8 +107,8 @@ export default function Home() {
           </Button>
         )}
 
-        {/* Lista de especialistas filtrados */}
-        <div className={styles.resultsContainer}>
+       {/* Lista de especialistas filtrados */}
+<div className={styles.resultsContainer}>
   {filteredDoctors.map((doctor) => (
     <div key={doctor.id} className={styles.doctorCard}>
       <div className={styles.doctorContent}>
@@ -123,9 +123,9 @@ export default function Home() {
 
         {/* Informações do médico */}
         <div className={styles.doctorInfo}>
-          <h3>{doctor.name}</h3>
-          <p>{doctor.specialty}</p>
-          <p>{doctor.location === 'sp' ? 'São Paulo' : 'Rio de Janeiro'}</p>
+          <h3 className={styles.docName}>{doctor.name}</h3>
+          <p className={styles.docSpecialty}>{doctor.specialty}</p>
+          <p className={styles.docLocation}>{doctor.location === 'sp' ? 'São Paulo' : 'Rio de Janeiro'}</p>
         </div>
       </div>
 
@@ -143,6 +143,7 @@ export default function Home() {
     </div>
   ))}
 </div>
+
 
       </div>
 

@@ -73,8 +73,8 @@ export default function Home() {
 
           <div className={styles.caixa2}>
             <p className={styles.titleBox2}>Dúvidas</p>
-            <button className={styles.butDuvidas}>Dúvidas sobre cadastro</button>
-            <button className={styles.butDuvidas}>Dúvidas sobre pagamentos</button>
+            <Link className={styles.butDuvidas} href='/duvidas'>Dúvidas sobre cadastro</Link>
+            <Link className={styles.butDuvidas} href='/duvidas'>Dúvidas sobre pagamentos</Link>
           </div>
         </div>
       </div>

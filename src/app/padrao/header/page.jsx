@@ -21,8 +21,8 @@ export default function Header () {
       </div>
       
       <div className={styles.navBar}>
-          <Link className={styles.link} href='./..'>SAC</Link>
-          <Link className={styles.link} href='./..'>Configurações</Link>
+          <Link className={styles.link} href='/duvidas'>SAC</Link>
+          <Link className={styles.link} href='/duvidas'>Configurações</Link>
 
         </div>
     </header>
