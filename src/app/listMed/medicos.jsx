@@ -9,7 +9,12 @@ const doctors = [
 
   { id: 5, name: 'Dr. Pedro Lima', specialty: 'pediatra', location: 'rj', bio: 'Atendimento humanizado e especializado.', numero:'5514998435929'},
   
-  { id: 6, name: 'Dr. Alexandre Morais', specialty: 'cardiologista', location: 'rj', bio: 'Focado em saúde cardiovascular.', numero:'5514998435929' },
-];
+  { id: 6, name: 'Dr. Felipe Lima', specialty: 'cardiologista', location: 'rj', bio: 'Focado em saúde cardiovascular.', numero:'5514998435929' },
+
+  { id: 7, name: 'Dr. Mariani Grassi', specialty: 'cardiologista', location: 'rj', bio: 'Focado em saúde cardiovascular.', numero:'5514998435929' },
+
+  { id: 8, name: 'Dr. Ricardão Dedo Grosso', specialty: 'cardiologista', location: 'rj', bio: 'Focado em saúde cardiovascular.', numero:'5514998435929' },
+
+  ];
 
 export default doctors;
