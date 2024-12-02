@@ -45,7 +45,9 @@ export default function Home() {
                            onChange={(e) => setSenha(e.target.value)}
                            required
                     />
-                  <button className={styles.cad} type="submit">Entrar</button>
+                  <button className={styles.cad}  onClick={() => {
+                      window.location.href = `/home`;
+                    }}>Entrar</button>
 
                 </form>
             </div>

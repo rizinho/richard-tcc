@@ -133,7 +133,7 @@ export default function Home() {
             </select>
           </div>
 
-          <button className={styles.cad} type="submit">Cadastrar</button>
+          <Link className={styles.cad} href='/home' >Cadastrar</Link>
 
         </form>
       </div>
