@@ -55,15 +55,15 @@ export default function Home() {
 
   // Simulação de dados de especialistas
   const doctors = [
-    { id: 1, name: 'Dr. João Silva', specialty: 'Urologista', location: 'sp' },
-    { id: 2, name: 'Dra. Maria Costa', specialty: 'Pediatra', location: 'sp' },
-    { id: 3, name: 'Dr. Carlos Sousa', specialty: 'Cardiologista', location: 'sp' },
-    { id: 4, name: 'Dra. Ana Oliveira', specialty: 'Urologista', location: 'sp' },
-    { id: 5, name: 'Dr. Pedro Lima', specialty: 'Pediatra', location: 'sp' },
-    { id: 6, name: 'Dr. Alexandre Morais', specialty: 'Pediatra', location: 'sp' },
-    { id: 6, name: 'Dr. Felipe Lima', specialty: 'Pediatra', location: 'sp' },
-    { id: 7, name: 'Dra. Mariani Grassi', specialty: 'Pediatra', location: 'sp' },
-    { id: 8, name: 'Dr. Ricardão Dedo Grosso', specialty: 'Cardiologista', location: 'rj' },
+    { med_cod: 1, usu_nome: 'Dr. João Silva', esp_nome: 'Urologista', usu_cidade: 'sp' },
+    { med_cod: 2, usu_nome: 'Dra. Maria Costa', esp_nome: 'Pediatra', usu_cidade: 'sp' },
+    { med_cod: 3, usu_nome: 'Dr. Carlos Sousa', esp_nome: 'Cardiologista', usu_cidade: 'sp' },
+    { med_cod: 4, usu_nome: 'Dra. Ana Oliveira', esp_nome: 'Urologista', usu_cidade: 'sp' },
+    { med_cod: 5, usu_nome: 'Dr. Pedro Lima', esp_nome: 'Pediatra', usu_cidade: 'sp' },
+    { med_cod: 6, usu_nome: 'Dr. Alexandre Morais', esp_nome: 'Pediatra', usu_cidade: 'sp' },
+    { med_cod: 6, usu_nome: 'Dr. Felipe Lima', esp_nome: 'Pediatra', usu_cidade: 'sp' },
+    { med_cod: 7, usu_nome: 'Dra. Mariani Grassi', esp_nome: 'Pediatra', usu_cidade: 'sp' },
+    { med_cod: 8, usu_nome: 'Dr. Ricardão Dedo Grosso', esp_nome: 'Cardiologista', usu_cidade: 'rj' },
   ];
 
   const handleOptionSelect = (event) => {
@@ -80,14 +80,22 @@ export default function Home() {
     setShowThirdButton(true);
   };
 
-  const handleSearch = () => {
-    const results = doctors.filter(
-      (doctor) =>
-        doctor.specialty === selectedSpecialty && doctor.location === selectedLocation
-    );
-    setFilteredDoctors(results);
+  const handleSearch = async () => {
+    try {
+      const dados = {
+        esp_cod: selectedSpecialty,
+        med_cidade: selectedLocation
+      }
+      const response = await api.post('/medicos/lista', dados);
+      if (response.data.sucesso) {
+        setFilteredDoctors(response.data.dados);
+      }
+    } catch (error) {
+      alert(error);
+    }
+    
   };
-
+  console.log(selectedLocation);
   return (
     <div className={styles.pageContainer}>
       <Header />
@@ -97,7 +105,7 @@ export default function Home() {
 
         <div className={styles.areaBut}>
           <Button className={styles.modalBut} onClick={() => setOpen(true)}>
-            {selectedSpecialty == 0 ? 'Pesquisar áreas, ex: urologista, pediatra, etc...' : listaEspecialidades[selectedSpecialty - 1].esp_nome}            
+            {selectedSpecialty == 0 ? 'Pesquisar áreas, ex: urologista, pediatra, etc...' : listaEspecialidades[selectedSpecialty - 1].esp_nome}
           </Button>
         </div>
 
@@ -121,7 +129,7 @@ export default function Home() {
 
         {showSecondButton && (
           <Button className={styles.modalBut} onClick={() => setOpenSecondModal(true)}>
-            Localização
+            {selectedLocation == '' ? 'Selecione a localização' : selectedLocation}
           </Button>
         )}
 
@@ -133,55 +141,59 @@ export default function Home() {
                 <option value="" disabled>
                   Selecione uma cidade
                 </option>
-                <option value="Bastos">Bastos</option>                
-                <option value="Iacri">Iacri</option>                
-                <option value="Tupã">Tupã</option>                
+                <option value="Bastos">Bastos</option>
+                <option value="Iacri">Iacri</option>
+                <option value="Tupã">Tupã</option>
               </select>
             </div>
           </Box>
         </Modal>
 
         {showThirdButton && (
-          <Button className={styles.modalButEnd} onClick={handleSearch}>
+          <Button className={styles.modalButEnd} onClick={() => handleSearch()}>
             Buscar
           </Button>
         )}
 
         {/* Lista de especialistas filtrados */}
         <div className={styles.resultsContainer}>
-          {filteredDoctors.map((doctor) => (
-            <div key={doctor.id} className={styles.doctorCard}>
-              <div className={styles.doctorContent}>
-                {/* Imagem do médico */}
-                <div className={styles.doctorImage}>
-                  <img
-                    src="/fotoPerf.jpg" // Exemplo de imagem
-                    alt={doctor.name}
-                    className={styles.image}
-                  />
+          {
+            filteredDoctors.length > 0 ? 
+            filteredDoctors.map((doctor) => (
+              <div key={doctor.med_cod} className={styles.doctorCard}>
+                <div className={styles.doctorContent}>
+                  {/* Imagem do médico */}
+                  <div className={styles.doctorImage}>
+                    <img
+                      src="/fotoPerf.jpg" // Exemplo de imagem
+                      alt={doctor.name}
+                      className={styles.image}
+                    />
+                  </div>
+  
+                  {/* Informações do médico */}
+                  <div className={styles.doctorInfo}>
+                    <h3 className={styles.docName}>{doctor.usu_nome}</h3>
+                    <p className={styles.docSpecialty}>{doctor.esp_nome}</p>
+                    <p className={styles.docLocation}>{doctor.usu_cidade}</p>
+                  </div>
                 </div>
-
-                {/* Informações do médico */}
-                <div className={styles.doctorInfo}>
-                  <h3 className={styles.docName}>{doctor.name}</h3>
-                  <p className={styles.docSpecialty}>{doctor.specialty}</p>
-                  <p className={styles.docLocation}>{doctor.location === 'sp' ? 'São Paulo' : 'Rio de Janeiro'}</p>
+  
+                {/* Botão de agendamento */}
+                <div className={styles.schedule}>
+                  <Button
+                    className={styles.timeButton}
+                    onClick={() => {
+                      window.location.href = `/home/telMedico/${doctor.med_cod}`;
+                    }}
+                  >
+                    Detalhes
+                  </Button>
                 </div>
               </div>
-
-              {/* Botão de agendamento */}
-              <div className={styles.schedule}>
-                <Button
-                  className={styles.timeButton}
-                  onClick={() => {
-                    window.location.href = `/home/telMedico/${doctor.id}`;
-                  }}
-                >
-                  Detalhes
-                </Button>
-              </div>
-            </div>
-          ))}
+            )) :
+            <p>Não existem médicos com este critério de pesquisa</p>
+          }
         </div>
 
 
