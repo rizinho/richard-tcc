@@ -8,14 +8,13 @@ import Image from 'next/image';
 import styles from './page.module.css';
 
 export default function DoctorProfile({ params: { id } }) {
-  // Filtra o médico pelo ID fornecido na URL
-  const doctor = doctors.filter((doc) => doc.id === parseInt(id, 10));
+  const doctor = doctors.find((doc) => doc.id === parseInt(id, 10));
 
-  if (doctor.length === 0) {
+  if (!doctor) {
     return <p className={styles.notFound}>Médico não encontrado.</p>;
   }
 
-  const { name, specialty, location, bio, numero } = doctor[0];
+  const { name, specialty, location, bio, crm, numero } = doctor;
 
   return (
     <div className={styles.pageContainer}>
@@ -27,22 +26,33 @@ export default function DoctorProfile({ params: { id } }) {
         </nav>
 
         <div className={styles.profile}>
-          {/* Informações do Médico */}
+          {/* Card Esquerdo - Informações Básicas */}
           <div className={styles.profileCard}>
             <Image
-              src="/fotoPerf.jpg" width={250} height={250}
+              src="/fotoPerf.jpg"
+              width={200}
+              height={200}
               alt={`Foto de ${name}`}
               className={styles.doctorImage}
             />
             <h1 className={styles.doctorName}>{name}</h1>
             <p className={styles.doctorSpecialty}>{specialty}</p>
+            <p className={styles.doctorCRM}>CRM: {crm}</p>
             <p className={styles.doctorLocation}>Local: {location.toUpperCase()}</p>
           </div>
 
-          {/* Informações Adicionais */}
+          {/* Card Direito - Informações Adicionais */}
           <div className={styles.details}>
             <h2>Sobre o Médico</h2>
             <p className={styles.doctorBio}>{bio}</p>
+
+            <h3>Doenças e Tratamentos</h3>
+            <ul>
+              <li>Catarata</li>
+              <li>Glaucoma</li>
+              <li>Erros Refrativos</li>
+              <li>Outros...</li>
+            </ul>
 
             {/* Botão para WhatsApp */}
             <a

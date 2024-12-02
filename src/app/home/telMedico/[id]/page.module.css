@@ -1,11 +1,16 @@
+/* Configurações gerais */
 .pageContainer {
   font-family: Arial, sans-serif;
-  background-color: #f2f5fa;
+  background-color: #f9fafc;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Container Principal */
 .container {
-  max-width: 1200px;
+  width: 1000px;
+  height: 700px;
   margin: 20px auto;
   padding: 20px;
   background-color: #fff;
@@ -13,6 +18,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Breadcrumb */
 .breadcrumb {
   margin-bottom: 20px;
   color: #555;
@@ -28,43 +34,66 @@
   text-decoration: underline;
 }
 
+/* Perfil */
 .profile {
   display: flex;
   gap: 20px;
+  align-items: flex-start; /* Alinha os itens ao topo */
 }
 
+/* Card do Médico - Maior Proporção */
 .profileCard {
-  flex: 1;
+  flex: 1.5; /* Antes era 1, aumentamos a proporção */
   text-align: center;
+  padding: 10px;
+  background-color: #f1f7f4; /* Fundo leve para destaque */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Imagem do Médico */
 .doctorImage {
-  width: 150px;
+  width: 150px; /* Aumentando de 150px para 200px */
   height: 150px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   object-fit: cover;
-  border: 2px solid #007BFF;
+  border: 4px solid #6ba596; /* Bordas ligeiramente maiores */
 }
 
+/* Nome do Médico */
 .doctorName {
-  font-size: 1.8rem;
+  font-size: 2rem; /* Texto maior */
   color: #333;
+  margin-bottom: 10px;
 }
 
+/* Especialidade */
 .doctorSpecialty {
-  font-size: 1.2rem;
+  font-size: 1.5rem; /* Antes era 1.2rem */
   color: #555;
+  margin-bottom: 10px;
+}
+
+/* CRM */
+.doctorCRM {
+  font-size: 1.2rem;
+  color: #007BFF;
   margin-bottom: 5px;
 }
 
+/* Localização */
 .doctorLocation {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #888;
+  margin-bottom: 15px;
 }
 
+
+/* Detalhes */
 .details {
   flex: 2;
+  padding-left: 20px;
 }
 
 .details h2 {
@@ -73,15 +102,55 @@
   margin-bottom: 10px;
 }
 
+.details h3 {
+  font-size: 1.2rem;
+  color: #444;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.details ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: #555;
+}
+
 .doctorBio {
   font-size: 1.1rem;
   color: #555;
   line-height: 1.5;
 }
 
+/* Botão do WhatsApp - Posicionado no canto inferior direito */
+.whatsappButton {
+  position: fixed; /* Fixa na tela */
+  bottom: 20px; /* Distância da parte inferior */
+  right: 20px; /* Distância da borda direita */
+  width: 200px; /* Largura reduzida para evitar overflow */
+  height: 50px; /* Altura ajustada */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #25D366;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.whatsappButton:hover {
+  background-color: #1da851;
+}
+
+/* Link para voltar - Posicionado no canto inferior esquerdo */
 .link {
-  display: inline-block;
-  margin-top: 20px;
+  position: fixed; /* Fixa na tela */
+  bottom: 20px; /* Distância da parte inferior */
+  left: 20px; /* Distância da borda esquerda */
+  font-size: 14px; /* Tamanho do texto ajustado */
   text-decoration: none;
   color: #007BFF;
   font-weight: bold;
@@ -92,28 +161,12 @@
   text-decoration: underline;
 }
 
+
+
+/* Caso o médico não seja encontrado */
 .notFound {
   text-align: center;
   font-size: 1.5rem;
   color: #555;
   margin-top: 50px;
-}
-
-.whatsappButton {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  background-color: #25D366; /* Cor oficial do WhatsApp */
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-}
-
-.whatsappButton:hover {
-  background-color: #1da851;
 }
