@@ -18,11 +18,20 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.backColor{
+  width: 400px;
+  height: 680px;
+  background-color: #7bada0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Breadcrumb */
 .breadcrumb {
   margin-bottom: 20px;
-  color: #555;
-  font-size: 0.9rem;
+  color: #000000;
+  font-size: 1rem;
 }
 
 .breadcrumb a {
@@ -45,10 +54,10 @@
 .profileCard {
   flex: 1.5; /* Antes era 1, aumentamos a proporção */
   text-align: center;
-  padding: 10px;
-  background-color: #f1f7f4; /* Fundo leve para destaque */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.txtCard{
+  margin-left: 400px;
+  width: 200px;
 }
 
 /* Imagem do Médico */
@@ -63,9 +72,11 @@
 
 /* Nome do Médico */
 .doctorName {
-  font-size: 2rem; /* Texto maior */
-  color: #333;
+  font-weight: 700px;
+  font-size: 15px;
+  color: #000000;
   margin-bottom: 10px;
+  text-align: ;
 }
 
 /* Especialidade */
@@ -92,13 +103,14 @@
 
 /* Detalhes */
 .details {
+
   flex: 2;
   padding-left: 20px;
 }
 
-.details h2 {
-  font-size: 1.5rem;
-  color: #333;
+.txtSob {
+  font-size: 30px;
+  color: #000000;
   margin-bottom: 10px;
 }
 
@@ -112,21 +124,22 @@
 .details ul {
   list-style: disc;
   margin-left: 20px;
-  color: #555;
+  color: #000000;
 }
 
 .doctorBio {
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 20px;
+  color: #000000;
   line-height: 1.5;
+  text-align: justify;
 }
 
 /* Botão do WhatsApp - Posicionado no canto inferior direito */
 .whatsappButton {
-  position: fixed; /* Fixa na tela */
-  bottom: 20px; /* Distância da parte inferior */
+
+  margin-top: 610px; 
   right: 20px; /* Distância da borda direita */
-  width: 200px; /* Largura reduzida para evitar overflow */
+  width: 300px; /* Largura reduzida para evitar overflow */
   height: 50px; /* Altura ajustada */
   display: flex;
   align-items: center;
@@ -144,24 +157,6 @@
 .whatsappButton:hover {
   background-color: #1da851;
 }
-
-/* Link para voltar - Posicionado no canto inferior esquerdo */
-.link {
-  position: fixed; /* Fixa na tela */
-  bottom: 20px; /* Distância da parte inferior */
-  left: 20px; /* Distância da borda esquerda */
-  font-size: 14px; /* Tamanho do texto ajustado */
-  text-decoration: none;
-  color: #007BFF;
-  font-weight: bold;
-}
-
-.link:hover {
-  color: #0056b3;
-  text-decoration: underline;
-}
-
-
 
 /* Caso o médico não seja encontrado */
 .notFound {

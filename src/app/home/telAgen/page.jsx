@@ -53,18 +53,18 @@ export default function Home() {
     }
   }
 
-  // Simulação de dados de especialistas
-  const doctors = [
-    { med_cod: 1, usu_nome: 'Dr. João Silva', esp_nome: 'Urologista', usu_cidade: 'sp' },
-    { med_cod: 2, usu_nome: 'Dra. Maria Costa', esp_nome: 'Pediatra', usu_cidade: 'sp' },
-    { med_cod: 3, usu_nome: 'Dr. Carlos Sousa', esp_nome: 'Cardiologista', usu_cidade: 'sp' },
-    { med_cod: 4, usu_nome: 'Dra. Ana Oliveira', esp_nome: 'Urologista', usu_cidade: 'sp' },
-    { med_cod: 5, usu_nome: 'Dr. Pedro Lima', esp_nome: 'Pediatra', usu_cidade: 'sp' },
-    { med_cod: 6, usu_nome: 'Dr. Alexandre Morais', esp_nome: 'Pediatra', usu_cidade: 'sp' },
-    { med_cod: 6, usu_nome: 'Dr. Felipe Lima', esp_nome: 'Pediatra', usu_cidade: 'sp' },
-    { med_cod: 7, usu_nome: 'Dra. Mariani Grassi', esp_nome: 'Pediatra', usu_cidade: 'sp' },
-    { med_cod: 8, usu_nome: 'Dr. Ricardão Dedo Grosso', esp_nome: 'Cardiologista', usu_cidade: 'rj' },
-  ];
+  // // Simulação de dados de especialistas
+  // const doctors = [
+  //   { med_cod: 1, usu_nome: 'Dr. João Silva', esp_nome: 'Urologista', usu_cidade: 'sp' },
+  //   { med_cod: 2, usu_nome: 'Dra. Maria Costa', esp_nome: 'Pediatra', usu_cidade: 'sp' },
+  //   { med_cod: 3, usu_nome: 'Dr. Carlos Sousa', esp_nome: 'Cardiologista', usu_cidade: 'sp' },
+  //   { med_cod: 4, usu_nome: 'Dra. Ana Oliveira', esp_nome: 'Urologista', usu_cidade: 'sp' },
+  //   { med_cod: 5, usu_nome: 'Dr. Pedro Lima', esp_nome: 'Pediatra', usu_cidade: 'sp' },
+  //   { med_cod: 6, usu_nome: 'Dr. Alexandre Morais', esp_nome: 'Pediatra', usu_cidade: 'sp' },
+  //   { med_cod: 6, usu_nome: 'Dr. Felipe Lima', esp_nome: 'Pediatra', usu_cidade: 'sp' },
+  //   { med_cod: 7, usu_nome: 'Dra. Mariani Grassi', esp_nome: 'Pediatra', usu_cidade: 'sp' },
+  //   { med_cod: 8, usu_nome: 'Dr. Ricardão Dedo Grosso', esp_nome: 'Cardiologista', usu_cidade: 'rj' },
+  // ];
 
   const handleOptionSelect = (event) => {
     setSelectedSpecialty(event.target.value); // Atualiza a especialidade selecionada

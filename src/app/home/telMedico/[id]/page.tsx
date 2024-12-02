@@ -20,7 +20,7 @@ export default function DoctorProfile({ params: { id } }) {
     <div className={styles.pageContainer}>
       <Header />
       <div className={styles.container}>
-        {/* Breadcrumb */}
+        <div className={styles.backColor}>
         <nav className={styles.breadcrumb}>
           <Link href="/home">Início</Link> &gt; <span>{specialty}</span> &gt; <span>{name}</span>
         </nav>
@@ -35,6 +35,12 @@ export default function DoctorProfile({ params: { id } }) {
               alt={`Foto de ${name}`}
               className={styles.doctorImage}
             />
+
+            <h2 className={styles.txtSob}>Sobre Mim</h2>
+            <p className={styles.doctorBio}>{bio}</p>
+          </div>
+
+          <div className={styles.txtCard}>
             <h1 className={styles.doctorName}>{name}</h1>
             <p className={styles.doctorSpecialty}>{specialty}</p>
             <p className={styles.doctorCRM}>CRM: {crm}</p>
@@ -43,16 +49,9 @@ export default function DoctorProfile({ params: { id } }) {
 
           {/* Card Direito - Informações Adicionais */}
           <div className={styles.details}>
-            <h2>Sobre o Médico</h2>
-            <p className={styles.doctorBio}>{bio}</p>
+            
 
-            <h3>Doenças e Tratamentos</h3>
-            <ul>
-              <li>Catarata</li>
-              <li>Glaucoma</li>
-              <li>Erros Refrativos</li>
-              <li>Outros...</li>
-            </ul>
+            
 
             {/* Botão para WhatsApp */}
             <a
@@ -65,10 +64,7 @@ export default function DoctorProfile({ params: { id } }) {
             </a>
           </div>
         </div>
-
-        <Link href="/home/telAgen/" className={styles.link}>
-          Voltar
-        </Link>
+        </div>
       </div>
       <Footer />
     </div>
